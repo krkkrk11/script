@@ -2,8 +2,7 @@
 local ws = game:GetService("Workspace")
 local a1 = ws.NPCs["Awakened Tomura"].HumanoidRootPart.CFrame
 local hv = CFrame.new(0,96,0)
-local MONlist = nil
-local Weaponlist = nil
+
 
 --All function
 
@@ -128,13 +127,6 @@ spawn(function()
 end)
 spawn(function()
     while wait() do
-        if not game:GetService("Players").krkkrk112233.PlayerGui.MainMenus.Inventory.CurrentWepImage.image == 6120801606 then
-            local args = {
-                [1] = "OrnamentBlaster"
-            }
-            
-            game:GetService("ReplicatedStorage").WeaponShop.Equip:FireServer(unpack(args))
-        end
         if _G.Autofarm then
             tptomon()
             game.workspace.Gravity = 0
