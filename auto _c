@@ -1,0 +1,46 @@
+local posduck = CFrame.new(544.3543701171875, 66.96710968017578, 466.3107604980469)
+local posNaNake555 = CFrame.new(-329.2029724121094, 67.41490936279297, 1209.377685546875)
+local posNaKhom = CFrame.new(133.1254119873047, 69.62580108642578, 98.0276107788086)
+local posSergeant = CFrame.new(-266.65252685546875, 69.36468505859375, 230.27706909179688)
+local TweenService = game:GetService("TweenService")
+local Tlme = 0
+_G.autofarm = true
+
+function getbox()
+    pcall(function()
+        local args = {
+            [1] = "FoodBike",
+            [2] = "Pando",
+            [3] = "rbxassetid://2797531394"
+        }
+        
+        game:GetService("ReplicatedStorage").DeliveryEvent:FireServer(unpack(args))
+    end)
+end
+function Checkbox()
+    pcall(function()
+        if game:GetService("Workspace").krkkrk112233.Box.Objective.Value == "Sergeant" then
+            TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Tlme, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+            {CFrame = posSergeant}):Play()
+        elseif game:GetService("Workspace").krkkrk112233.Box.Objective.Value == "Duck" then
+            TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Tlme, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+            {CFrame = posduck}):Play()
+        elseif game:GetService("Workspace").krkkrk112233.Box.Objective.Value == "Na Khom" then
+            TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Tlme, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+            {CFrame = posNaKhom}):Play()
+        elseif game:GetService("Workspace").krkkrk112233.Box.Objective.Value == "NaNake555" then
+            TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Tlme, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+            {CFrame = posNaNake555}):Play()
+        end
+    end)
+end
+while _G.autofarm do wait(1)
+    pcall(function()
+        wait(2)
+        getbox()
+        wait(3)
+        Checkbox()
+        wait(2)
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    end)
+end
