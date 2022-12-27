@@ -645,14 +645,3 @@ task.spawn(function()
 					end)
 				end
 end)
-local EH = 0
-repeat wait(5)
-    EH = EH+1
-    if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-        if EH == 4 and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-            HopLowServer()
-        else
-	        EH = 0
-	    end
-    end
-until EH == 10
