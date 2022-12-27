@@ -651,6 +651,8 @@ repeat wait(5)
     if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
         if EH == 4 and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
             HopLowServer()
-        end
+        else
+	        EH = 0
+	    end
     end
 until EH == 10
